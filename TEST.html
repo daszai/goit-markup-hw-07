@@ -10,25 +10,13 @@
     />
 
     <style>
-      .fix {
-        background-color: red;
+      body {
+        color: red;
       }
-      .bbb {
-        background-color: yellow;
-        width: 1000px;
-        height: 1000px;
-      }
-      .a {
-        width: 100px;
-        height: 100px;
-        background-color: aqua;
-        display: inline-block;
-        transition-property: background, color;
-        transition-duration: 3s;
-      }
-      .a:hover {
-        background-color: red;
-        color: blue;
+      @media not screen and (max-width: 1000px) {
+        body {
+          background-color: tomato;
+        }
       }
     </style>
     <title>Document</title>

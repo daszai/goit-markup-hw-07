@@ -252,4 +252,67 @@ img {
 
 .logo-span {
   color: var(--colorMain);
+}
+
+.fix11 {
+  display: block;
+}
+
+.page-footer__input {
+  width: 358px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3019607843);
+  background-color: #2f303a;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-right: 16px;
+  padding-bottom: 15px;
+  color: white;
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.page-footer__fix11 {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+.fix11-appearance {
+  border-color: #2196f3;
+  position: relative;
+  fill: #ffffff;
+  background-color: #2196f3;
+  padding-left: 42px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1490196078);
+}
+
+.fix11__label {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: #ffffff;
+}
+
+.fix11__svg {
+  display: inline;
+  position: absolute;
+  right: 28px;
+  bottom: 13px;
+}
+
+body {
+  font-family: Roboto, sans-sef;
+  color: var(--colorTextMain);
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
 }/*# sourceMappingURL=main.css.map */

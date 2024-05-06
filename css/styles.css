@@ -765,7 +765,7 @@ ol {
 }
 
 .hid2:checked {
-  visibility: hidden;
+  opacity: 0;
 }
 
 .hid2 {
