@@ -1,0 +1,7 @@
+div {
+  background-color: red;
+  @media not print and (min-width: 600px) {
+    background-color: aqua;
+    color: red;
+  }
+}
