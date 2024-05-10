@@ -51,22 +51,22 @@
     <main>
       <section>
         <div class="modal is-hidden" data-modal>
-          <div class="box">
-            <div class="box2" data-modal-close>
+          <div class="modal__wrapper">
+            <div class="modal__wrapper2" data-modal-close>
               <svg width="11" height="11" viewBox="0 0 11 11">
                 <use href="./images/icons.svg#vector"></use>
               </svg>
             </div>
 
-            <p class="p2">Zostaw swoje dane w formularzu poniżej</p>
+            <p class="modal__header">Zostaw swoje dane w formularzu poniżej</p>
             <form>
-              <label for="Imie" class="label1">Imie</label>
+              <label for="Imie" class="modal__label">Imie</label>
               <div class="div1">
                 <input
                   type="text"
                   name="email"
                   id="Imie"
-                  class="imput1 anima"
+                  class="modal__input anima"
                   name="Imie"
                 />
                 <svg
@@ -80,7 +80,7 @@
                 </svg>
               </div>
 
-              <label for="Telefon" class="label1">Telefon</label>
+              <label for="Telefon" class="modal__label">Telefon</label>
               <div class="div1">
                 <input
                   type="tel"
@@ -100,7 +100,7 @@
                 </svg>
               </div>
 
-              <label for="Email" class="label1">Email</label>
+              <label for="Email" class="modal__label">Email</label>
               <div class="div1">
                 <input
                   type="email"
@@ -120,7 +120,7 @@
                 </svg>
               </div>
 
-              <label for="Komentarz" class="label1">Komentarz</label>
+              <label for="Komentarz" class="modal__label">Komentarz</label>
               <div class="div1 lastdiv">
                 <textarea
                   name="Komentarz"
