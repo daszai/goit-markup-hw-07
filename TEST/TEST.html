@@ -27,18 +27,19 @@
         <input type="color" name="email" />
       </label>
       <script>
-        function calculateEngravingPrice(numbers, value) {
-          let total = [];
+        const book = {
+          title: "The Last Kingdom",
+          author: "Bernard Cornwell",
+          genres: ["historical prose", "adventure"],
+          rating: 8.38,
+        };
 
-          for (let i = 0; i < numbers.length; i += 1) {
-            if (numbers[i] >= value) {
-              total.push(numbers[i]);
-            }
-          }
-          console.log(total);
-          return total;
-        }
-        calculateEngravingPrice([10, 2, 34, 5, 6], 5);
+        let a = Object.create(book);
+        a.title = "2test";
+        let b = Object.create(book);
+
+        console.log("title" in a);
+        console.log(b.title);
       </script>
     </form>
   </body>
