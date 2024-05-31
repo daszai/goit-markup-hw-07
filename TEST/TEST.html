@@ -33,13 +33,14 @@
           genres: ["historical prose", "adventure"],
           rating: 8.38,
         };
+        const keys = Object.keys(book);
 
-        let a = Object.create(book);
-        a.title = "2test";
-        let b = Object.create(book);
-
-        console.log("title" in a);
-        console.log(b.title);
+        for (const key of keys) {
+          // Klucz
+          console.log(key);
+          // Wartość właściwości
+          console.log("a " + book[key]);
+        }
       </script>
     </form>
   </body>
