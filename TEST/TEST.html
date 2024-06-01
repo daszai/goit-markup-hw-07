@@ -27,20 +27,17 @@
         <input type="color" name="email" />
       </label>
       <script>
-        const book = {
-          title: "The Last Kingdom",
-          author: "Bernard Cornwell",
-          genres: ["historical prose", "adventure"],
-          rating: 8.38,
-        };
-        const keys = Object.keys(book);
+        const temps = [14, -4, 25, 8, 11];
 
-        for (const key of keys) {
-          // Klucz
-          console.log(key);
-          // Wartość właściwości
-          console.log("a " + book[key]);
-        }
+        // Konsola wyświetli tablicę
+        console.log(temps);
+        // ❌ To nie zadziała, ponieważ przekazujemy całą tablicę
+        console.log(Math.max(temps)); // NaN
+
+        // Konsola wyświetli zestaw oddzielnych liczb
+        console.log(...temps);
+        // ✅ Rozkładamy kolekcję elementów na oddzielne argumenty
+        console.log(Math.max(...temps)); // 25
       </script>
     </form>
   </body>
