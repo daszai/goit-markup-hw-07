@@ -27,17 +27,21 @@
         <input type="color" name="email" />
       </label>
       <script>
-        const temps = [14, -4, 25, 8, 11];
+        function makeTask(data) {
+          const completed = false;
+          const category = "General";
+          const priority = "Normal";
+          // Change code below this line
+          let d = {};
+          d.completed = completed;
+          d.text = data.text;
+          if (data.category === undefined) d.category = category;
+          if (data.priority === undefined) d.priority = priority;
 
-        // Konsola wyświetli tablicę
-        console.log(temps);
-        // ❌ To nie zadziała, ponieważ przekazujemy całą tablicę
-        console.log(Math.max(temps)); // NaN
-
-        // Konsola wyświetli zestaw oddzielnych liczb
-        console.log(...temps);
-        // ✅ Rozkładamy kolekcję elementów na oddzielne argumenty
-        console.log(Math.max(...temps)); // 25
+          console.log(d);
+          return d;
+          // Change code above this line
+        }
       </script>
     </form>
   </body>
