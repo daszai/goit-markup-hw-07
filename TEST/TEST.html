@@ -22,13 +22,33 @@
     </div>
 
     <form>
-      <label>
-        Emaildfsfd
+      <label class="js-btn">
+        Emaildfsfdfffffffffffffffffff
         <input type="color" name="email" />
       </label>
       <script>
         //
         //
+        const mango = {
+          username: "Mango",
+          showUsername() {
+            console.log("hej");
+            console.log(this);
+            console.log(`My username is: ${this.username}`);
+          },
+        };
+
+        const btn = document.querySelector(".js-btn");
+        btn.accessKey = "k"; // ✅ Działa
+
+        mango.showUsername();
+
+        // ❌ this będzie się odnosić do button, jeśli będziemy używać showUsername jako callback
+        btn.addEventListener("click", mango.showUsername); // nie działa
+
+        // ✅ Nie zapomnij dołączyć kontekstu metod obiektowych
+        btn.addEventListener("click", mango.showUsername.bind(mango));
+
         //
         //
       </script>
