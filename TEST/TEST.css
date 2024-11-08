@@ -1,9 +1,0 @@
-div {
-  background-color: red;
-}
-@media not print and (min-width: 600px) {
-  div {
-    background-color: aqua;
-    color: red;
-  }
-}/*# sourceMappingURL=TEST.css.map */

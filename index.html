@@ -8,492 +8,115 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./SASS/main.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>portfolio</title>
+    <link rel="stylesheet" href="./css/mainmin.css" />
+    <title>Home</title>
   </head>
   <body>
-    <header class="page-header">
-      <a href="./index.html" class="logo"><span class="Web">Web</span>Studio</a>
-      <nav>
-        <ul class="page-header__nav">
-          <li><a href=".#" class="linkT linkT--color-blue">Agencja</a></li>
+    <header>
+      <div class="header">
+        <ul class="display">
           <li>
-            <a href="./portfolio.html" class="linkT">Portfolio</a>
+            <ul class="display__writings">
+              <li><img src="images/filmoteka.png" alt="Filmoteka" /></li>
+              <li class="header__font header__font--size">Filmoteka</li>
+            </ul>
           </li>
-          <li><a href="./index.html" class="linkT">Agencja</a></li>
+          <li>
+            <nav>
+              <ul class="display__writings display__display__writings">
+                <li><a class="header__font" href="index.html">Home</a></li>
+                <li>
+                  <a class="header__font" href="library.html">my library</a>
+                </li>
+              </ul>
+            </nav>
+          </li>
         </ul>
-      </nav>
-      <ul class="page-header_list">
-        <li class="svg-header-icon">
-          <svg width="10" height="16">
-            <use href="./images/icons.svg#nasi64"></use>
-          </svg>
-          <a href="mailto:info@devstudio.com" class="linkT"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li class="svg-header-icon">
-          <svg width="16" height="12">
-            <use href="./images/icons.svg#nasi68"></use>
-          </svg>
-          <a href="tel:+48111111111" class="linkT">+48 111 111 111</a>
-        </li>
-      </ul>
+        <ul class="header__serach">
+          <li>
+            <form>
+              <input
+                class="header__font header__font--width"
+                type="text"
+                name="serachfilm"
+                placeholder="Movie search"
+              />
+            </form>
+          </li>
+          <li class="header__serachimg">
+            <img src="images/search.png" alt="search" />
+          </li>
+        </ul>
+        <p class="header__font header__font--color header--hidden">
+          Search result not successful. Enter the correct movie name and
+        </p>
+      </div>
     </header>
 
     <main>
-      <section>
-        <div class="modal is-hidden" data-modal>
-          <div class="modal__wrapper">
-            <div class="modal__wrapper2" data-modal-close>
-              <svg width="11" height="11" viewBox="0 0 11 11">
-                <use href="./images/icons.svg#vector"></use>
-              </svg>
-            </div>
+      <div class="moviecontainer"></div>
 
-            <p class="modal__header">Zostaw swoje dane w formularzu poniżej</p>
-            <form>
-              <label for="Imie" class="modal__label">Imie</label>
-              <div class="modal__input-wrapper">
-                <input
-                  type="text"
-                  name="email"
-                  id="Imie"
-                  class="modal__input animation"
-                  name="Imie"
-                />
-                <svg
-                  width="12"
-                  height="12"
-                  class="modal__svg animation"
-                  viewBox="0 0 12 12"
-                  id="aaa"
-                >
-                  <use href="./images/icons.svg#man"></use>
-                </svg>
-              </div>
-
-              <label for="Telefon" class="modal__label">Telefon</label>
-              <div class="modal__input-wrapper">
-                <input
-                  type="tel"
-                  name="Telefon"
-                  id="Telefon"
-                  class="modal__input animation"
-                  name="Telefon"
-                />
-                <svg
-                  width="12"
-                  height="12"
-                  class="modal__svg animation"
-                  viewBox="0 0 12 12"
-                  id="aaa"
-                >
-                  <use href="./images/icons.svg#man"></use>
-                </svg>
-              </div>
-
-              <label for="Email" class="modal__label">Email</label>
-              <div class="modal__input-wrapper">
-                <input
-                  type="email"
-                  name="Email"
-                  id="Email"
-                  class="modal__input animation"
-                  name="Email"
-                />
-                <svg
-                  width="12"
-                  height="12"
-                  class="modal__svg animation"
-                  viewBox="0 0 12 12"
-                  id="aaa"
-                >
-                  <use href="./images/icons.svg#man"></use>
-                </svg>
-              </div>
-
-              <label for="Komentarz" class="modal__label">Komentarz</label>
-              <div class="modal__input-wrapper lastdiv">
-                <textarea
-                  name="Komentarz"
-                  id="Komentarz"
-                  class="modal__input modal__textarea--size animation"
-                  name="Komentarz"
-                  placeholder="Wprowadź tekst"
-                >
-                </textarea>
-              </div>
-
-              <div class="modal__input-wrapper modal__input-wrapper--fix">
-                <svg
-                  width="15"
-                  height="16"
-                  class="modal__svg animation fix1"
-                  viewBox="0 0 13 8"
-                  id="aaa"
-                >
-                  <use href="./images/icons.svg#ptaszek11"></use>
-                </svg>
-                <input
-                  type="checkbox"
-                  name="regulamin"
-                  id="regulamin"
-                  class="modal__checkbox"
-                  name="regulamin"
-                />
-
-                <label for="regulamin" class="modal__statute"
-                  >Oświadczam iż akceptuję <a href="">Regulamin</a> i
-                  <a href="">Politykę Prywatności .</a></label
-                >
-              </div>
-              <button type="submit" class="modal__btn">Wyślij</button>
-            </form>
-          </div>
-        </div>
-      </section>
-      <section class="section-1 wrapper">
-        <div class="section-1__wrapper">
-          <h1 class="section-1__header">
-            EFEKTYWNE ROZWIĄZANIA<br />
-            DLA WASZEGO BIZNESU
-          </h1>
-
-          <button data-modal-open type="button" class="btn btn--buton-center">
-            Zamów usługę
-          </button>
-        </div>
-      </section>
-
-      <section class="wrapper">
-        <ul class="section-2__wrap section-fix">
-          <li>
-            <div class="section-2__svg">
-              <svg width="70" height="70">
-                <use href="./images/icons.svg#antenna"></use>
-              </svg>
-            </div>
-            <p class="section-2">LOREM IPSUM</p>
-            <p class="section-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-              arcu sem. Sed non sodales dui. Interdum et malesuada
-            </p>
-          </li>
-          <li>
-            <div class="section-2__svg">
-              <svg width="70" height="70">
-                <use href="./images/icons.svg#clock"></use>
-              </svg>
-            </div>
-            <p class="section-2">LOREM IPSUM</p>
-            <p class="section-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-              arcu sem. Sed non sodales dui. Interdum et malesuada
-            </p>
-          </li>
-          <li>
-            <div class="section-2__svg">
-              <svg width="70" height="70">
-                <use href="./images/icons.svg#diagram"></use>
-              </svg>
-            </div>
-            <p class="section-2">LOREM IPSUM</p>
-            <p class="section-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-              arcu sem. Sed non sodales dui. Interdum et malesuada
-            </p>
-          </li>
-          <li>
-            <div class="section-2__svg">
-              <svg width="70" height="70">
-                <use href="./images/icons.svg#astronauta"></use>
-              </svg>
-            </div>
-            <p class="section-2">LOREM IPSUM</p>
-            <p class="section-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-              arcu sem. Sed non sodales dui. Interdum et malesuada
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <section class="wrapper section-fix section-33">
-        <h2 class="heading-2">Czym się zajmujemy</h2>
-        <ul class="a1">
-          <li class="relative_o">
-            <img
-              src="./images/img1.jpg"
-              alt="tablet"
-              width="370"
-              height="294"
-            />
-            <div class="item100">Aplikacje komputerowe</div>
-          </li>
-          <li class="relative_o">
-            <img
-              src="./images/img2.jpg"
-              alt="telefon"
-              width="370"
-              height="294"
-            />
-            <div class="item100">Aplikacje mobilne</div>
-          </li>
-          <li class="relative_o">
-            <img
-              src="./images/img3.jpg"
-              alt="komputer"
-              width="370"
-              height="294"
-            />
-            <div class="item100">Rozwiązania graficzne</div>
-          </li>
-        </ul>
-      </section>
-
-      <section class="wrapper section-fix v2">
-        <h2 class="heading-2">Nasz zespół</h2>
-        <ul class="section-3">
-          <li class="section-2">
-            <img
-              src="./images/man1.jpg"
-              alt="człowiek"
-              width="270"
-              height="260"
-            />
-            <p class="fix3">John Doe</p>
-            <p class="fix2">Product Designer</p>
-            <div class="sad">
-              <svg width="44" height="44" class="pic3" viewBox="-12 -12 44 44">
-                <use href="./images/icons.svg#instagram"></use>
-              </svg>
-              <svg width="44" height="44" class="pic3" viewBox="-12 -13 44 44">
-                <use href="./images/icons.svg#ptak"></use>
-              </svg>
-              <svg width="44" height="44" class="pic3" viewBox="-17 -12 44 44">
-                <use href="./images/icons.svg#facebook"></use>
-              </svg>
-              <svg width="44" height="44" class="pic3" viewBox="-12 -12 44 44">
-                <use href="./images/icons.svg#linkedin"></use>
-              </svg>
-            </div>
-          </li>
-          <li class="section-2">
-            <img
-              src="./images/man2.jpg"
-              alt="człowiek"
-              width="270"
-              height="260"
-            />
-            <p class="fix3">John Doe</p>
-            <p class="fix2">Frontend Developer</p>
-            <div class="sad">
-              <svg width="44" height="44" class="pic3" viewBox="-12 -12 44 44">
-                <use href="./images/icons.svg#instagram"></use>
-              </svg>
-              <svg width="44" height="44" class="pic3" viewBox="-12 -13 44 44">
-                <use href="./images/icons.svg#ptak"></use>
-              </svg>
-              <svg width="44" height="44" class="pic3" viewBox="-17 -12 44 44">
-                <use href="./images/icons.svg#facebook"></use>
-              </svg>
-              <svg width="44" height="44" class="pic3" viewBox="-12 -12 44 44">
-                <use href="./images/icons.svg#linkedin"></use>
-              </svg>
-            </div>
-          </li>
-          <li class="section-2">
-            <img
-              src="./images/man3.jpg"
-              alt="człowiek"
-              width="270"
-              height="260"
-            />
-            <p class="fix3">John Doe</p>
-            <p class="fix2">Marketing</p>
-            <div class="sad">
-              <svg width="44" height="44" class="pic3" viewBox="-12 -12 44 44">
-                <use href="./images/icons.svg#instagram"></use>
-              </svg>
-              <svg width="44" height="44" class="pic3" viewBox="-12 -13 44 44">
-                <use href="./images/icons.svg#ptak"></use>
-              </svg>
-              <svg width="44" height="44" class="pic3" viewBox="-17 -12 44 44">
-                <use href="./images/icons.svg#facebook"></use>
-              </svg>
-              <svg width="44" height="44" class="pic3" viewBox="-12 -12 44 44">
-                <use href="./images/icons.svg#linkedin"></use>
-              </svg>
-            </div>
-          </li>
-          <li class="section-2">
-            <img
-              src="./images/man4.jpg"
-              alt="człowiek"
-              width="270"
-              height="260"
-            />
-            <p class="fix3">John Doe</p>
-            <p class="fix2">John Doe UI Designer</p>
-            <div class="sad">
-              <svg width="44" height="44" class="pic3" viewBox="-12 -12 44 44">
-                <use href="./images/icons.svg#instagram"></use>
-              </svg>
-              <svg width="44" height="44" class="pic3" viewBox="-12 -13 44 44">
-                <use href="./images/icons.svg#ptak"></use>
-              </svg>
-              <svg width="44" height="44" class="pic3" viewBox="-17 -12 44 44">
-                <use href="./images/icons.svg#facebook"></use>
-              </svg>
-              <svg width="44" height="44" class="pic3" viewBox="-12 -12 44 44">
-                <use href="./images/icons.svg#linkedin"></use>
-              </svg>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section class="wrapper section-fix">
-        <h2 class="heading-2 fix">Nasi klienci</h2>
-        <ul class="section-4">
-          <li class="item10">
-            <svg width="170" height="92" viewBox="-64.5 -22.64 170 92">
-              <use href="./images/icons.svg#nasi1"></use>
-            </svg>
-          </li>
-          <li class="item10">
-            <svg width="170" height="92" viewBox="-65 -20 170 92">
-              <use href="./images/icons.svg#nasi2"></use>
-            </svg>
-          </li>
-          <li class="item10">
-            <svg width="170" height="92" viewBox="-64.86 -24.7 170 92">
-              <use href="./images/icons.svg#nasi3"></use>
-            </svg>
-          </li>
-          <li class="item10">
-            <svg width="170" height="92" viewBox="-43 -24.7 170 92">
-              <use href="./images/icons.svg#nasi4"></use>
-            </svg>
-          </li>
-          <li class="item10">
-            <svg width="170" height="92" viewBox="-54 -22.77 170 92">
-              <use href="./images/icons.svg#nasi5"></use>
-            </svg>
-          </li>
-          <li class="item10">
-            <svg width="170" height="92" viewBox="-38 -22.77 170 92">
-              <use href="./images/icons.svg#nasi6"></use>
-            </svg>
-          </li>
-        </ul>
-      </section>
-    </main>
-    <footer class="wrapper page-footer">
-      <div style="width: 1200px; margin: 0 auto; text-align: left">
-        <address class="page-footer__address">
-          <ul>
-            <li>
-              <a href="./index.html" class="page-footer__logo"
-                ><span class="logo-span">Web</span>Studio</a
-              >
-            </li>
-            <li class="page-footer__item">
-              m. Warszawa, Aleje Jerozolimskie 21
-            </li>
-            <li class="page-footer__item-2">
-              <a href="mailto:info@example.com" class="linkT"
-                >info@example.com</a
-              >
-            </li>
-            <li class="page-footer__item-2">
-              <a href="tel:+48111111111" class="linkT">+48 111 111 111</a>
-            </li>
-          </ul>
-          <ul>
-            <li class="page-footer__label-social-icons">DOŁĄCZ DO NAS</li>
-            <div class="page-footer__social-icon">
-              <li>
-                <svg
-                  width="44"
-                  height="44"
-                  class="pic4"
-                  viewBox="-12 -12 44 44"
-                >
-                  <use href="./images/icons.svg#instagram"></use>
-                </svg>
-              </li>
-              <li>
-                <svg
-                  width="44"
-                  height="44"
-                  class="pic4"
-                  viewBox="-12 -13 44 44"
-                >
-                  <use href="./images/icons.svg#ptak"></use>
-                </svg>
-              </li>
-              <li>
-                <svg
-                  width="44"
-                  height="44"
-                  class="pic4"
-                  viewBox="-17 -12 44 44"
-                >
-                  <use href="./images/icons.svg#facebook"></use>
-                </svg>
-              </li>
-              <li>
-                <svg
-                  width="44"
-                  height="44"
-                  class="pic4"
-                  viewBox="-12 -12 44 44"
-                >
-                  <use href="./images/icons.svg#linkedin"></use>
-                </svg>
-              </li>
-            </div>
-          </ul>
-          <form>
-            <label class="page-footer__label-newsletter">
-              <p class="page-footer__description-newsletter">
-                Zapisz się do newslettera
-              </p>
-              <input
-                type="email"
-                name="email"
-                class="fix11 page-footer__input"
-                placeholder="E-mail"
-              />
-            </label>
-
-            <button
-              type="submit"
-              class="fix11 page-footer__fix11 diss1 fix11-appearance"
-            >
-              <p class="fix11__label">Zapisz się</p>
-              <svg
-                width="24"
-                height="24"
-                class="fix11__svg"
-                viewBox="0 0 24 24"
-              >
-                <use href="./images/icons.svg#ptak1"></use>
-              </svg>
-            </button>
-          </form>
-        </address>
+      <div class="pagination">
+        <a
+          href=""
+          class="pagination__element pagination__one pagination--hidden"
+        >
+          <svg width="16" height="16">
+            <use href="/images/arrowleft.svg#left"></use>
+          </svg>
+        </a>
+        <a
+          href=""
+          class="pagination__element pagination__two pagination--hidden pagination__pagination__two"
+        ></a>
+        <span
+          class="pagination__element pagination__three pagination--hidden pagination__pagination__two"
+        ></span>
+        <a
+          href=""
+          class="pagination__element pagination__four pagination--checked pagination--hidden"
+          >1</a
+        >
+        <a
+          href=""
+          class="pagination__element pagination__five pagination--hidden"
+          >2</a
+        >
+        <a
+          href=""
+          class="pagination__element pagination__six pagination--hidden"
+          >3</a
+        >
+        <a
+          href=""
+          class="pagination__element pagination__seven pagination--hidden"
+          >4</a
+        >
+        <a
+          href=""
+          class="pagination__element pagination__eight pagination--hidden"
+          >5</a
+        >
+        <span
+          class="pagination__element pagination__nine pagination--hidden pagination__pagination__two"
+        ></span>
+        <a
+          href=""
+          class="pagination__element pagination__ten pagination--hidden pagination__pagination__two"
+        ></a>
+        <a
+          href=""
+          class="pagination__element pagination__eleven pagination--hidden"
+        >
+          <svg width="16" height="16">
+            <use href="/images/arrowright.svg#right"></use>
+          </svg>
+        </a>
       </div>
-    </footer>
+    </main>
 
-    <script src="./js/modal.js"></script>
+    <footer></footer>
+    <script type="text/javascript" src="js/movies.js"></script>
+    <script type="text/javascript" src="js/pagination.js"></script>
   </body>
 </html>

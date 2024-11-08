@@ -1,3 +1,5 @@
-@import "_vars";
-@import "header";
-@import "index.scs";
+@import "utils/vars";
+@import "components/header";
+@import "components/library";
+@import "components/_moviecontainer.scss";
+@import "components/_pagination.scss";

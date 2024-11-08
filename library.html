@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/mainmin.css" />
+    <title>my library</title>
+  </head>
+  <body>
+    <header>
+      <div class="header headerfix">
+        <div class="header--opacity">
+          <ul class="display">
+            <li>
+              <ul class="display__writings">
+                <li><img src="images/filmoteka.png" alt="Filmoteka" /></li>
+                <li class="header__font header__font--size">Filmoteka</li>
+              </ul>
+            </li>
+            <li>
+              <nav>
+                <ul class="display__writings display__display__writings">
+                  <li>
+                    <a class="header__font" href="index.html">Home</a>
+                  </li>
+                  <li>
+                    <a class="header__font" href="library.html">my library</a>
+                  </li>
+                </ul>
+              </nav>
+            </li>
+          </ul>
+
+          <ul class="header__buttons">
+            <li>
+              <button
+                class="header__font header__font__height header__check"
+                type="button"
+              >
+                Watched
+              </button>
+            </li>
+            <li>
+              <button class="header__font header__font__height" type="button">
+                queue
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="filmswrapper"></main>
+
+    <footer></footer>
+    <script type="text/javascript" src="js/movies.js"></script>
+    <script type="text/javascript" src="js/pagination.js"></script>
+  </body>
+</html>

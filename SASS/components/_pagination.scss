@@ -1,0 +1,54 @@
+.pagination {
+  margin: auto;
+  width: 280px;
+  display: flex;
+  &--checked {
+    background-color: #ff6b08;
+    border: #ff6b08;
+    border-radius: 5px;
+  }
+  &--hidden {
+    visibility: hidden;
+  }
+  &__pagination__two {
+    visibility: hidden;
+    position: absolute;
+  }
+  &__element {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-family: Roboto;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0%;
+    color: black;
+  }
+  &__element__disabled {
+    color: grey;
+    cursor: not-allowed;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .pagination {
+    width: 374px;
+    &__pagination__two {
+      visibility: visible;
+      position: static;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .pagination {
+    width: 374px;
+    &__pagination__two {
+      visibility: visible;
+      position: static;
+    }
+  }
+}
